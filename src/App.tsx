@@ -24,7 +24,7 @@ const ContentContainer = styled.div`
   display: flex;
   justify-content: center;
 
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: 930px) {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;

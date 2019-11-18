@@ -1,23 +1,35 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { Project } from "../../App";
 
 interface ContainerProps {
   selected: boolean;
 }
 
+const LinkContainer = styled.a`
+  display: none;
+`;
+
 const Container = styled.div<ContainerProps>`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 8px;
+  padding: 16px 8px;
   border-bottom: 1px solid lightgray;
   cursor: default;
   transition: background 0.3s;
   background: ${props => props.selected && "#0070c91c"};
 
+  ${LinkContainer} {
+    display: ${props => props.selected && "flex"};
+  }
+
   :hover {
     background: ${props => !props.selected && "rgba(0, 0, 0, 0.02)"};
+
+    ${LinkContainer} {
+      display: flex;
+    }
   }
 
   @media (prefers-color-scheme: dark) {
@@ -35,12 +47,8 @@ const Label = styled.h3`
   font-weight: 500;
 `;
 
-const LinkContainer = styled.a`
-  display: flex;
-`;
-
 const Link = styled.h3`
-  margin: 16px;
+  margin: 0 4px;
   font-size: 16px;
   font-weight: 300;
   transition: all 0.3s;
@@ -56,7 +64,7 @@ const Link = styled.h3`
 `;
 
 const Icon = styled.img`
-  max-width: 18px;
+  max-width: 16px;
 `;
 
 interface Props {

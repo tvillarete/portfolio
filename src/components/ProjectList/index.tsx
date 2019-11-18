@@ -9,7 +9,7 @@ const Container = styled.div`
   border-radius: 4px;
   overflow: hidden;
 
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: 930px) {
     margin: 0 0 10vh 0;
     flex: 1;
     width: 90vw;

@@ -1,7 +1,6 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage" : "tannerv.com",
   "private": true,
   "dependencies": {
     "@types/jest": "24.0.23",

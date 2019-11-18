@@ -3,17 +3,16 @@ import styled from "styled-components";
 
 const Container = styled.div`
   position: absolute;
-  bottom: 0.9%;
+  bottom: 1.4%;
   left: 13%;
-  height: 20px;
-  width: 20px;
+  height: 5.5%;
+  width: 3.5%;
   background: url("/safari.png");
   background-size: cover;
   animation-name: bounce;
   animation-timing-function: ease;
   animation-duration: 2s;
   transform-origin: bottom;
-  animation-iteration-count: 2;
 
   @keyframes bounce {
     0% {

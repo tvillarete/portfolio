@@ -95,8 +95,7 @@ interface Props {
 
 const Laptop = ({ projects, curProject, setCurProject }: Props) => {
   const [browserHidden, setBrowserHidden] = useState(true);
-  const [videoSrc, setVideoSrc] = useState(projects[curProject].videoSrc);
-  const [loading, setLoading] = useState(false);
+  const videoSrc = projects[curProject].videoSrc;
 
   useEffect(() => {
     setTimeout(() => {
@@ -104,18 +103,13 @@ const Laptop = ({ projects, curProject, setCurProject }: Props) => {
     }, 1500);
   }, []);
 
-  useEffect(() => {
-    setVideoSrc(projects[curProject].videoSrc);
-    setLoading(true);
-  }, [curProject]);
-
   return (
     <Container>
       <Screen>
         <Browser isHidden={browserHidden}>
           <BrowserHeader src="/BrowserHeader.jpg" />
           <BrowserContent>
-            <Video key={videoSrc} autoPlay muted loop>
+            <Video key={videoSrc} autoPlay muted playsInline loop>
               <source src={videoSrc} type="video/mp4" />
             </Video>
           </BrowserContent>
