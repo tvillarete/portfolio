@@ -6,8 +6,6 @@ import ListItem from "./ListItem";
 const Container = styled.div`
   flex: 0 0 25%;
   margin: 10vh 0;
-  border-radius: 4px;
-  overflow: hidden;
 
   @media screen and (max-width: 930px) {
     margin: 0 0 10vh 0;

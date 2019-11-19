@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Project } from "../../App";
 
 interface ContainerProps {
@@ -14,23 +14,21 @@ const Container = styled.div<ContainerProps>`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 8px;
+  padding: 16px 8px 16px 16px;
   border-bottom: 1px solid lightgray;
-  cursor: default;
+  border-left: 3px solid transparent;
+  cursor: pointer;
   transition: background 0.3s;
-  background: ${props => props.selected && "#0070c91c"};
 
-  ${LinkContainer} {
-    display: ${props => props.selected && "flex"};
-  }
+  ${props =>
+    props.selected &&
+    css`
+      border-left: 3px solid #0070c9;
 
-  :hover {
-    background: ${props => !props.selected && "rgba(0, 0, 0, 0.02)"};
-
-    ${LinkContainer} {
-      display: flex;
-    }
-  }
+      ${LinkContainer} {
+        display: flex;
+      }
+    `};
 
   @media (prefers-color-scheme: dark) {
     border-bottom: 1px solid #404040;
