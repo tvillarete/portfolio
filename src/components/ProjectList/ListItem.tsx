@@ -23,7 +23,7 @@ const Container = styled.div<ContainerProps>`
   ${props =>
     props.selected &&
     css`
-      border-left: 3px solid #0070c9;
+      border-left: 3px solid #008eff;
 
       ${LinkContainer} {
         display: flex;
@@ -51,7 +51,7 @@ const Link = styled.h3`
   font-weight: 300;
   transition: all 0.3s;
   text-decoration: none;
-  color: #0070c9;
+  color: #008eff;
   cursor: pointer;
 
   @media (prefers-color-scheme: dark) {
@@ -76,12 +76,13 @@ const ListItem = ({ project, selected, onClick }: Props) => {
     <Container selected={selected} onClick={onClick}>
       <Label>{project.name}</Label>
       <LinkContainer
+        rel="noopener"
         style={{ textDecoration: "none" }}
         href={project.url}
         target="_blank"
       >
         <Link>Visit</Link>
-        <Icon src="/external-link.svg" />
+        <Icon alt="external link" src="/external-link.svg" />
       </LinkContainer>
     </Container>
   );

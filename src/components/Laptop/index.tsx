@@ -107,7 +107,7 @@ const Laptop = ({ projects, curProject, setCurProject }: Props) => {
     <Container>
       <Screen>
         <Browser isHidden={browserHidden}>
-          <BrowserHeader src="/BrowserHeader.jpg" />
+          <BrowserHeader alt="browser header" src="/BrowserHeader.jpg" />
           <BrowserContent>
             <Video key={videoSrc} autoPlay muted playsInline loop>
               <source src={videoSrc} type="video/mp4" />

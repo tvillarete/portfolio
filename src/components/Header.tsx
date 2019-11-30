@@ -38,7 +38,7 @@ const Link = styled.a`
   font-size: 16px;
   transition: all 0.3s;
   text-decoration: none;
-  color: dodgerblue;
+  color: #008eff;
   cursor: pointer;
 
   @media (prefers-color-scheme: dark) {
@@ -54,10 +54,10 @@ const Header = () => {
       <Title>Tanner Villarete</Title>
       <Subtitle>Frontend Developer</Subtitle>
       <LinkContainer>
-        <Link target="_blank" href="https://www.github.com/tvillarete">
+        <Link rel="noopener" target="_blank" href="https://www.github.com/tvillarete">
           GitHub
         </Link>
-        <Link target="_blank" href="https://www.linkedin.com/in/tvillarete/">
+        <Link rel="noopener" target="_blank" href="https://www.linkedin.com/in/tvillarete/">
           LinkedIn
         </Link>
       </LinkContainer>
