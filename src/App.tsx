@@ -39,6 +39,11 @@ export interface Project {
 
 const projects: Project[] = [
   {
+    name: "iPod Classic.js",
+    url: "http://tannerv.com/ipod",
+    videoSrc: "/iPod.mp4"
+  },
+  {
     name: "Apple Music.js",
     url: "http://tannerv.com/music",
     videoSrc: "/AppleMusicJS.mp4"
